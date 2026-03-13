@@ -3,60 +3,184 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI & Data Science Portfolio</title>
+    <title>AI & DS Portfolio | [Your Name]</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
     <style>
-        body { background-color: #050505; color: white; font-family: 'Inter', sans-serif; }
-        .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); }
-        .gradient-text { background: linear-gradient(90.13deg, #FFFFFF 0%, #A855F7 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        body { 
+            background-color: #030303; 
+            color: #ffffff; 
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            scroll-behavior: smooth;
+        }
+        /* Animated Background Gradient */
+        .bg-glow {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: radial-gradient(circle at 50% -20%, #3b0764 0%, transparent 50%);
+            z-index: -1;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            transition: all 0.3s ease;
+        }
+        .glass-card:hover {
+            border-color: #a855f7;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px -10px rgba(168, 85, 247, 0.3);
+        }
+        .gradient-text {
+            background: linear-gradient(to right, #fff 20%, #a855f7 50%, #6366f1 80%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-size: 200% auto;
+            animation: textShine 5s linear infinite;
+        }
+        @keyframes textShine { to { background-position: 200% center; } }
     </style>
 </head>
-<body class="p-6 md:p-12">
+<body class="selection:bg-purple-500/30">
+    <div class="bg-glow"></div>
 
-    <section class="max-w-4xl mx-auto text-center py-20">
-        <img src="me.jpg" alt="Profile" class="w-32 h-32 rounded-full mx-auto mb-6 border-2 border-purple-500 p-1 object-cover">
+    <nav class="fixed top-0 w-full z-50 px-6 py-4 flex justify-between items-center backdrop-blur-md border-b border-white/5">
+        <div class="text-xl font-extrabold tracking-tighter">AI<span class="text-purple-500">.</span>DS</div>
+        <div class="hidden md:flex gap-8 text-sm font-medium text-gray-400">
+            <a href="#about" class="hover:text-white transition">About</a>
+            <a href="#projects" class="hover:text-white transition">Projects</a>
+            <a href="#contact" class="hover:text-white transition">Contact</a>
+        </div>
+        <a href="resume.pdf" class="px-5 py-2 bg-white text-black text-sm font-bold rounded-full hover:bg-purple-500 hover:text-white transition">Resume</a>
+    </nav>
+
+    <section id="about" class="pt-32 pb-20 px-6 max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12">
+        <div class="flex-1 space-y-6">
+            <div class="inline-block px-3 py-1 rounded-full border border-purple-500/30 bg-purple-500/10 text-purple-400 text-xs font-bold uppercase tracking-widest">
+                Available for 2026 Internships
+            </div>
+            <h1 class="text-6xl md:text-8xl font-extrabold leading-tight">
+                Architecting <span class="gradient-text">Intelligence.</span>
+            </h1>
+            <p class="text-gray-400 text-lg max-w-xl leading-relaxed">
+                I am an **AI & Data Science student** focused on building scalable machine learning systems. I bridge the gap between raw big data and actionable business intelligence.
+            </p>
+            <div class="flex gap-4">
+                <a href="#" class="p-3 glass-card rounded-xl"><i data-lucide="github"></i></a>
+                <a href="#" class="p-3 glass-card rounded-xl"><i data-lucide="linkedin"></i></a>
+                <a href="#" class="p-3 glass-card rounded-xl"><i data-lucide="twitter"></i></a>
+            </div>
+        </div>
         
-        <h1 class="text-5xl md:text-7xl font-bold mb-4">I'm <span class="gradient-text">Your Name</span></h1>
-        <p class="text-xl text-gray-400 mb-8">AI & Data Science Student | Solving complex problems with data.</p>
-        
-        <div class="flex justify-center gap-6">
-            <a href="https://github.com" class="hover:text-purple-400 transition"><i data-lucide="github"></i></a>
-            <a href="https://linkedin.com" class="hover:text-purple-400 transition"><i data-lucide="linkedin"></i></a>
-            <a href="mailto:email@example.com" class="hover:text-purple-400 transition"><i data-lucide="mail"></i></a>
+        <div class="relative group">
+            <div class="absolute -inset-1 bg-gradient-to-r from-purple-600 to-blue-600 rounded-full blur opacity-25 group-hover:opacity-50 transition duration-1000"></div>
+            <img src="me.jpg" alt="Profile" class="relative w-64 h-64 md:w-80 md:h-80 rounded-full object-cover border-4 border-[#030303]">
         </div>
     </section>
 
-    <section class="max-w-4xl mx-auto grid md:grid-cols-3 gap-6 mb-20">
-        <div class="glass p-6 rounded-2xl">
-            <i data-lucide="brain" class="text-purple-500 mb-4"></i>
-            <h3 class="font-bold text-lg">Machine Learning</h3>
-            <p class="text-sm text-gray-400">Scikit-learn, PyTorch, Neural Networks.</p>
-        </div>
-        <div class="glass p-6 rounded-2xl">
-            <i data-lucide="database" class="text-purple-500 mb-4"></i>
-            <h3 class="font-bold text-lg">Data Engineering</h3>
-            <p class="text-sm text-gray-400">SQL, Python (Pandas), ETL Pipelines.</p>
-        </div>
-        <div class="glass p-6 rounded-2xl">
-            <i data-lucide="bar-chart-3" class="text-purple-500 mb-4"></i>
-            <h3 class="font-bold text-lg">Visualization</h3>
-            <p class="text-sm text-gray-400">Tableau, PowerBI, Matplotlib.</p>
-        </div>
-    </section>
-
-    <section class="max-w-4xl mx-auto">
-        <h2 class="text-3xl font-bold mb-8">Featured Projects</h2>
-        <div class="space-y-6">
-            <div class="glass p-8 rounded-3xl flex flex-col md:flex-row justify-between items-center gap-6 hover:border-purple-500/50 transition">
-                <div>
-                    <h3 class="text-2xl font-bold">Predictive Analytics Model</h3>
-                    <p class="text-gray-400 mt-2">Predicted market trends with 89% accuracy using LSTM networks.</p>
-                </div>
-                <a href="#" class="bg-white text-black px-6 py-2 rounded-full font-bold hover:bg-purple-500 hover:text-white transition">View Code</a>
+    <section class="py-20 px-6 max-w-6xl mx-auto">
+        <h2 class="text-3xl font-bold mb-12 flex items-center gap-4">
+            <span class="h-px w-12 bg-purple-500"></span> Core Stack
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+            <div class="glass-card p-6 rounded-2xl">
+                <i data-lucide="layers" class="text-purple-500 mb-4"></i>
+                <h4 class="font-bold mb-2 text-white">Deep Learning</h4>
+                <ul class="text-sm text-gray-500 space-y-1">
+                    <li>• PyTorch / TensorFlow</li>
+                    <li>• CNNs & Transformers</li>
+                    <li>• LLM Fine-tuning</li>
+                </ul>
+            </div>
+            <div class="glass-card p-6 rounded-2xl">
+                <i data-lucide="database" class="text-blue-500 mb-4"></i>
+                <h4 class="font-bold mb-2 text-white">Data Engineering</h4>
+                <ul class="text-sm text-gray-500 space-y-1">
+                    <li>• Apache Spark / Kafka</li>
+                    <li>• SQL & NoSQL</li>
+                    <li>• Vector Databases</li>
+                </ul>
+            </div>
+            <div class="glass-card p-6 rounded-2xl">
+                <i data-lucide="code-2" class="text-emerald-500 mb-4"></i>
+                <h4 class="font-bold mb-2 text-white">DevOps / MLOps</h4>
+                <ul class="text-sm text-gray-500 space-y-1">
+                    <li>• Docker & K8s</li>
+                    <li>• AWS / Azure ML</li>
+                    <li>• CI/CD Pipelines</li>
+                </ul>
+            </div>
+            <div class="glass-card p-6 rounded-2xl">
+                <i data-lucide="binary" class="text-amber-500 mb-4"></i>
+                <h4 class="font-bold mb-2 text-white">Analysis</h4>
+                <ul class="text-sm text-gray-500 space-y-1">
+                    <li>• Statistical Modeling</li>
+                    <li>• Pandas / NumPy</li>
+                    <li>• Tableau / D3.js</li>
+                </ul>
             </div>
         </div>
     </section>
+
+    <section id="projects" class="py-20 px-6 max-w-6xl mx-auto">
+        <div class="flex justify-between items-end mb-12">
+            <div>
+                <h2 class="text-4xl font-extrabold mb-2">Featured Work</h2>
+                <p class="text-gray-400">Selected projects that demonstrate technical depth.</p>
+            </div>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8">
+            <div class="glass-card rounded-3xl overflow-hidden group">
+                <div class="h-48 bg-gradient-to-br from-purple-900/50 to-indigo-900/50 flex items-center justify-center border-b border-white/5">
+                    <i data-lucide="bot" size="48" class="text-white/20 group-hover:scale-110 transition duration-500"></i>
+                </div>
+                <div class="p-8">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-2xl font-bold">Generative AI Agent</h3>
+                        <a href="#" class="text-purple-400 hover:text-white"><i data-lucide="external-link"></i></a>
+                    </div>
+                    <p class="text-gray-400 text-sm mb-6 leading-relaxed">
+                        Built an autonomous research agent using LangChain and GPT-4 that scrapes academic journals and summarizes findings into structured datasets.
+                    </p>
+                    <div class="flex gap-2">
+                        <span class="px-3 py-1 bg-white/5 rounded-lg text-xs font-mono">Python</span>
+                        <span class="px-3 py-1 bg-white/5 rounded-lg text-xs font-mono">OpenAI</span>
+                        <span class="px-3 py-1 bg-white/5 rounded-lg text-xs font-mono">Pinecone</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="glass-card rounded-3xl overflow-hidden group">
+                <div class="h-48 bg-gradient-to-br from-blue-900/50 to-emerald-900/50 flex items-center justify-center border-b border-white/5">
+                    <i data-lucide="cpu" size="48" class="text-white/20 group-hover:scale-110 transition duration-500"></i>
+                </div>
+                <div class="p-8">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-2xl font-bold">Real-time Fraud Detection</h3>
+                        <a href="#" class="text-blue-400 hover:text-white"><i data-lucide="external-link"></i></a>
+                    </div>
+                    <p class="text-gray-400 text-sm mb-6 leading-relaxed">
+                        Developed a streaming pipeline using Kafka and Spark to identify fraudulent financial transactions with a latency of less than 200ms.
+                    </p>
+                    <div class="flex gap-2">
+                        <span class="px-3 py-1 bg-white/5 rounded-lg text-xs font-mono">PySpark</span>
+                        <li><span class="px-3 py-1 bg-white/5 rounded-lg text-xs font-mono">Kafka</span>
+                        <span class="px-3 py-1 bg-white/5 rounded-lg text-xs font-mono">Scikit-learn</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact" class="py-20 px-6 max-w-6xl mx-auto text-center border-t border-white/5">
+        <h2 class="text-3xl font-bold mb-4">Let's build something epic.</h2>
+        <p class="text-gray-400 mb-8">Currently open to internship and junior role opportunities.</p>
+        <a href="mailto:your@email.com" class="text-2xl font-bold text-purple-500 hover:underline">your@email.com</a>
+        <div class="mt-12 text-gray-600 text-xs">
+            © 2026 Crafted by [Your Name] • AI & DS Portfolio
+        </div>
+    </footer>
 
     <script>
         lucide.createIcons();
