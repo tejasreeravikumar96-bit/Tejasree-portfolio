@@ -3,135 +3,179 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>R. Tejasree | AI Researcher & DS Student</title>
+    <title>R. Tejasree | AI Researcher & Activist</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
     <style>
-        body { background-color: #030303; color: #ffffff; font-family: 'Plus Jakarta Sans', sans-serif; scroll-behavior: smooth; }
-        .bg-glow { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: radial-gradient(circle at 50% -20%, #3b0764 0%, transparent 50%); z-index: -1; }
-        .glass-card { background: rgba(255, 255, 255, 0.02); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.08); transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
-        .glass-card:hover { border-color: #a855f7; transform: translateY(-5px); background: rgba(255, 255, 255, 0.05); }
-        .gradient-text { background: linear-gradient(to right, #fff 20%, #a855f7 50%, #6366f1 80%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-size: 200% auto; animation: textShine 5s linear infinite; }
-        @keyframes textShine { to { background-position: 200% center; } }
+        :root { --accent: #a855f7; --bg: #030303; }
+        body { background-color: var(--bg); color: #ffffff; font-family: 'Plus Jakarta Sans', sans-serif; overflow-x: hidden; cursor: none; }
+        
+        /* Custom Cursor */
+        #cursor { width: 20px; height: 20px; background: var(--accent); border-radius: 50%; position: fixed; pointer-events: none; z-index: 9999; transition: transform 0.1s ease; mix-blend-mode: difference; }
+        
+        .bg-grid { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-image: radial-gradient(rgba(168, 85, 247, 0.15) 1px, transparent 1px); background-size: 40px 40px; z-index: -1; mask-image: radial-gradient(ellipse at center, black, transparent 80%); }
+        
+        .glass-card { background: rgba(255, 255, 255, 0.01); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.05); transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1); position: relative; overflow: hidden; }
+        .glass-card::before { content: ""; position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.05), transparent); transition: 0.5s; }
+        .glass-card:hover::before { left: 100%; }
+        .glass-card:hover { border-color: var(--accent); transform: scale(1.02); background: rgba(168, 85, 247, 0.03); }
+
+        .gradient-text { background: linear-gradient(to right, #fff, var(--accent), #6366f1); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-size: 200% auto; animation: shine 8s linear infinite; font-family: 'Space Grotesk', sans-serif; }
+        @keyframes shine { to { background-position: 200% center; } }
+
+        .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out; }
+        .reveal.active { opacity: 1; transform: translateY(0); }
     </style>
 </head>
 <body class="selection:bg-purple-500/30">
-    <div class="bg-glow"></div>
+    <div id="cursor"></div>
+    <div class="bg-grid"></div>
 
-    <nav class="fixed top-0 w-full z-50 px-6 py-4 flex justify-between items-center backdrop-blur-md border-b border-white/5">
-        <div class="text-xl font-extrabold tracking-tighter italic">RT<span class="text-purple-500">.</span>AI</div>
-        <div class="hidden md:flex gap-8 text-[10px] font-bold uppercase tracking-[0.2em] text-gray-400">
-            <a href="#projects" class="hover:text-white transition">Projects</a>
-            <a href="#skills" class="hover:text-white transition">Expertise</a>
-            <a href="#languages" class="hover:text-white transition">Languages</a>
+    <nav class="fixed top-0 w-full z-50 px-8 py-6 flex justify-between items-center backdrop-blur-md">
+        <div class="text-2xl font-black tracking-tighter italic hover:scale-110 transition cursor-pointer">
+            RT<span class="text-purple-500">.</span>
         </div>
-        <a href="mailto:tejasreeravikumar96@gmail.com" class="px-5 py-2 bg-purple-600 text-white text-xs font-bold rounded-full hover:bg-purple-500 transition">Contact Me</a>
+        <div class="flex gap-6 items-center">
+            <a href="mailto:tejasreeravikumar96@gmail.com" class="hidden md:block text-[10px] font-bold tracking-[0.3em] uppercase opacity-50 hover:opacity-100 transition">Email Me</a>
+            <div class="h-4 w-px bg-white/20"></div>
+            <a href="#projects" class="px-6 py-2 bg-white text-black text-[10px] font-bold uppercase rounded-full hover:bg-purple-500 hover:text-white transition-all shadow-lg shadow-purple-500/20">View Work</a>
+        </div>
     </nav>
 
-    <section id="about" class="pt-32 pb-20 px-6 max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12">
-        <div class="flex-1 space-y-6">
-            <div class="inline-block px-3 py-1 rounded-full border border-purple-500/30 bg-purple-500/10 text-purple-400 text-[10px] font-bold uppercase tracking-widest">
-                AI Student • Social Activist • Aspiring Professor
+    <section class="min-h-screen pt-40 pb-20 px-8 max-w-7xl mx-auto grid lg:grid-cols-12 gap-12 items-center">
+        <div class="lg:col-span-7 space-y-8">
+            <div class="flex items-center gap-3 reveal">
+                <span class="w-8 h-[2px] bg-purple-500"></span>
+                <span class="text-xs font-bold uppercase tracking-widest text-purple-400">Aspiring Professor & AI Researcher</span>
             </div>
-            <h1 class="text-6xl md:text-8xl font-extrabold leading-[0.85] tracking-tighter">
+            <h1 class="text-7xl md:text-9xl font-extrabold leading-[0.8] tracking-tighter reveal">
                 Hi, I'm <br>
                 <span class="gradient-text">R. Tejasree</span>
             </h1>
-            <p class="text-gray-300 text-lg md:text-xl max-w-2xl leading-relaxed font-medium">
-                I build intelligent solutions to address human challenges. From successfully deploying <span class="text-white font-bold italic">Citizen Helper AI</span> to architecting mental health tools, I am dedicated to using <span class="text-purple-400">Data Science</span> as a force for community impact and future academic research.
+            <p class="text-gray-400 text-lg md:text-xl max-w-xl leading-relaxed reveal">
+                An AI & Data Science student bridging the gap between <span class="text-white border-b border-purple-500">social activism</span> and complex algorithmic solutions. Passionate about empowering communities through intelligence.
             </p>
-            <div class="flex gap-4 pt-4">
-                <a href="https://github.com/tejasreeravikumar96-bit" class="p-3 glass-card rounded-xl hover:text-purple-400 transition"><i data-lucide="github"></i></a>
-                <a href="https://www.linkedin.com/in/teju-r-tech" class="p-3 glass-card rounded-xl hover:text-purple-400 transition"><i data-lucide="linkedin"></i></a>
-                <div class="flex items-center gap-2 px-4 py-2 glass-card rounded-xl text-xs font-medium">
-                    <i data-lucide="mic-2" size="14" class="text-purple-400"></i> Singer
+            <div class="flex gap-6 reveal pt-4">
+                <a href="https://github.com/tejasreeravikumar96-bit" target="_blank" class="hover:text-purple-500 transition"><i data-lucide="github" size="28"></i></a>
+                <a href="https://www.linkedin.com/in/teju-r-tech" target="_blank" class="hover:text-purple-500 transition"><i data-lucide="linkedin" size="28"></i></a>
+                <div class="flex items-center gap-2 px-4 py-2 border border-white/10 rounded-full text-[10px] font-bold uppercase tracking-tighter">
+                    <span class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span> 2026 Grad
                 </div>
             </div>
         </div>
         
-        <div class="relative group">
-            <div class="absolute -inset-1 bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl blur opacity-20 group-hover:opacity-40 transition duration-1000"></div>
-            <img src="me.jpg" alt="R. Tejasree" class="relative w-64 h-80 md:w-80 md:h-[450px] rounded-2xl object-cover border border-white/10 shadow-2xl">
-        </div>
-    </section>
-
-    <section id="projects" class="py-20 px-6 max-w-6xl mx-auto">
-        <h2 class="text-3xl font-bold mb-10">Strategic Projects</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div class="glass-card p-8 rounded-3xl border-t-2 border-t-emerald-500">
-                <div class="flex justify-between items-center mb-4">
-                    <h3 class="text-xl font-bold">Citizen Helper AI App</h3>
-                    <span class="text-[9px] bg-emerald-500 text-black font-black px-2 py-0.5 rounded-full uppercase">Success</span>
+        <div class="lg:col-span-5 relative flex justify-center reveal">
+            <div class="absolute -top-10 -right-10 w-40 h-40 bg-purple-600/20 blur-[100px] rounded-full"></div>
+            <div class="relative">
+                <img src="profile.jpg" alt="R. Tejasree" class="w-72 h-96 md:w-[400px] md:h-[500px] rounded-[2rem] object-cover grayscale hover:grayscale-0 transition duration-700 border border-white/10">
+                <div class="absolute -bottom-6 -left-6 glass-card p-6 rounded-2xl flex items-center gap-4">
+                    <div class="p-3 bg-purple-500 rounded-lg"><i data-lucide="mic-2" class="text-white"></i></div>
+                    <div>
+                        <p class="text-[10px] uppercase font-bold text-gray-400 tracking-widest">Also a</p>
+                        <p class="text-sm font-bold">Vocalist & Singer</p>
+                    </div>
                 </div>
-                <p class="text-gray-400 text-sm mb-6">A successful implementation of AI to assist citizens with navigating complex administrative tasks and local queries efficiently.</p>
-                <div class="flex gap-3 text-[10px] font-mono text-emerald-400">#Impact #Deployed</div>
-            </div>
-
-            <div class="glass-card p-8 rounded-3xl border-t-2 border-t-purple-500">
-                <div class="flex justify-between items-center mb-4">
-                    <h3 class="text-xl font-bold">AI Tutor</h3>
-                    <i data-lucide="book-open" size="16" class="text-purple-500"></i>
-                </div>
-                <p class="text-gray-400 text-sm mb-6">Interactive educational assistant developed to simplify learning paths and provide instant technical guidance for students.</p>
-                <div class="flex gap-3 text-[10px] font-mono text-purple-400">#Streamlit #Python</div>
-            </div>
-
-            <div class="glass-card p-8 rounded-3xl opacity-80 border-t-2 border-t-gray-700">
-                <div class="flex justify-between items-center mb-4">
-                    <h3 class="text-xl font-bold italic">Ryoko Aibo</h3>
-                    <span class="text-[9px] border border-white/20 text-gray-400 px-2 py-0.5 rounded-full uppercase italic">Working on it</span>
-                </div>
-                <p class="text-gray-400 text-sm mb-6">Developing an intelligent travel management buddy to refine itinerary logic and streamline user travel logistics.</p>
-            </div>
-
-            <div class="glass-card p-8 rounded-3xl opacity-80 border-t-2 border-t-gray-700">
-                <div class="flex justify-between items-center mb-4">
-                    <h3 class="text-xl font-bold italic">Talk Therapy</h3>
-                    <span class="text-[9px] border border-white/20 text-gray-400 px-2 py-0.5 rounded-full uppercase italic">Working on it</span>
-                </div>
-                <p class="text-gray-400 text-sm mb-6">A mental health-focused schedule planner aimed at curing distractions and fostering productivity through algorithmic support.</p>
             </div>
         </div>
     </section>
 
-    <section id="skills" class="py-20 px-6 max-w-6xl mx-auto border-t border-white/5">
-        <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
-            <div class="glass-card p-6 rounded-2xl">
-                <h4 class="text-purple-500 font-black text-xs uppercase mb-4 tracking-tighter">AI Core</h4>
-                <p class="text-sm text-gray-300">ML, DL, DWDM, SQL. Expert use of <strong>Weka</strong> and <strong>Orange</strong> for data mining.</p>
+    <section id="projects" class="py-32 px-8 max-w-7xl mx-auto">
+        <h2 class="text-4xl font-black mb-16 tracking-tighter uppercase italic"><span class="text-purple-500">01.</span> Deployed & Active</h2>
+        <div class="grid md:grid-cols-2 gap-8">
+            <div class="glass-card p-10 rounded-[2.5rem] group reveal">
+                <div class="flex justify-between items-start mb-8">
+                    <div class="p-4 bg-emerald-500/10 rounded-2xl text-emerald-500"><i data-lucide="users"></i></div>
+                    <span class="text-[10px] font-black py-1 px-3 bg-emerald-500 text-black rounded-full">SUCCESSFUL DEPLOYMENT</span>
+                </div>
+                <h3 class="text-3xl font-bold mb-4">Citizen Helper AI</h3>
+                <p class="text-gray-400 leading-relaxed mb-8">Streamlining civic duties and administrative navigation through intelligent conversational agents. Proven impact in community guidance.</p>
+                <div class="flex gap-4 font-bold text-[10px] text-gray-500"><span>#CIVIC_TECH</span> <span>#AI</span></div>
             </div>
-            <div class="glass-card p-6 rounded-2xl">
-                <h4 class="text-purple-500 font-black text-xs uppercase mb-4 tracking-tighter">Languages</h4>
-                <p class="text-sm text-gray-300">Python, C, Java.</p>
+
+            <div class="glass-card p-10 rounded-[2.5rem] group reveal">
+                <div class="flex justify-between items-start mb-8">
+                    <div class="p-4 bg-purple-500/10 rounded-2xl text-purple-500"><i data-lucide="book-open"></i></div>
+                    <span class="text-[10px] font-black py-1 px-3 bg-purple-500 text-white rounded-full">LIVE</span>
+                </div>
+                <h3 class="text-3xl font-bold mb-4">AI Tutor</h3>
+                <p class="text-gray-400 leading-relaxed mb-8">An interactive educational companion built with Streamlit, making complex Data Science concepts accessible to all students.</p>
+                <div class="flex gap-4 font-bold text-[10px] text-gray-500"><span>#STREAMLIT</span> <span>#EDTECH</span></div>
             </div>
-            <div class="glass-card p-6 rounded-2xl">
-                <h4 class="text-purple-400 font-black text-xs uppercase mb-4 tracking-tighter">Identity</h4>
-                <p class="text-sm text-gray-300">Social Activist, Student Leader, Vocalist.</p>
+        </div>
+
+        <h2 class="text-4xl font-black mb-16 mt-32 tracking-tighter uppercase italic text-right"><span class="text-purple-500">02.</span> Current Research</h2>
+        <div class="grid md:grid-cols-2 gap-8">
+            <div class="glass-card p-10 rounded-[2.5rem] border-dashed reveal">
+                <h3 class="text-2xl font-bold mb-2">Ryoko Aibo</h3>
+                <p class="text-purple-400 text-xs font-bold mb-6 tracking-widest uppercase">Travel Ecosystem Logic</p>
+                <p class="text-gray-500 text-sm leading-relaxed mb-8">Architecting a unified travel buddy system to solve modern logistics and itinerary fragmentation using predictive data models.</p>
             </div>
-            <div class="glass-card p-6 rounded-2xl">
-                <h4 class="text-purple-400 font-black text-xs uppercase mb-4 tracking-tighter">Goal</h4>
-                <p class="text-sm text-gray-300 font-bold italic">Future Professor & Academic Researcher.</p>
+            <div class="glass-card p-10 rounded-[2.5rem] border-dashed reveal">
+                <h3 class="text-2xl font-bold mb-2">Talk Therapy</h3>
+                <p class="text-purple-400 text-xs font-bold mb-6 tracking-widest uppercase">Mental Health Engineering</p>
+                <p class="text-gray-500 text-sm leading-relaxed mb-8">Bridging schedule planning with distraction-curing algorithms to support student well-being and neuro-focus.</p>
             </div>
         </div>
     </section>
 
-    <section id="languages" class="py-20 px-6 max-w-6xl mx-auto text-center">
-        <div class="flex flex-wrap justify-center gap-4">
-            <span class="text-xs font-bold px-4 py-2 bg-white/5 rounded-lg border border-white/10 italic">English (Fluent)</span>
-            <span class="text-xs font-bold px-4 py-2 bg-white/5 rounded-lg border border-white/10 italic">Kannada (Native)</span>
-            <span class="text-xs font-bold px-4 py-2 bg-white/5 rounded-lg border border-white/10 italic">Telugu (Fluent)</span>
-            <span class="text-xs font-bold px-4 py-2 bg-white/5 rounded-lg border border-white/10 italic">Hindi (Fluent)</span>
-            <span class="text-xs font-bold px-4 py-2 bg-white/5 rounded-lg border border-white/10 opacity-50 italic">Tamil (Basic)</span>
-            <span class="text-xs font-bold px-4 py-2 bg-white/5 rounded-lg border border-white/10 opacity-50 italic">German (Basic)</span>
+    <section id="skills" class="py-32 bg-white/5 px-8">
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-4 gap-4">
+            <div class="glass-card p-8 rounded-3xl reveal">
+                <h4 class="text-xs font-black text-purple-500 uppercase tracking-tighter mb-4">Core AI Stack</h4>
+                <p class="font-bold text-gray-300">ML / DL / SQL / DWDM</p>
+                <p class="text-[10px] mt-2 text-gray-500 italic">Advanced use of Weka & Orange Tools</p>
+            </div>
+            <div class="glass-card p-8 rounded-3xl reveal">
+                <h4 class="text-xs font-black text-purple-500 uppercase tracking-tighter mb-4">Engineering</h4>
+                <p class="font-bold text-gray-300">Python / Java / C</p>
+                <p class="text-[10px] mt-2 text-gray-500 italic">Data Management & Logic</p>
+            </div>
+            <div class="glass-card p-8 rounded-3xl reveal">
+                <h4 class="text-xs font-black text-purple-500 uppercase tracking-tighter mb-4">Philosophy</h4>
+                <p class="font-bold text-gray-300">Academia & Activism</p>
+                <p class="text-[10px] mt-2 text-gray-500 italic">Future Professor Focus</p>
+            </div>
+            <div class="glass-card p-8 rounded-3xl reveal">
+                <h4 class="text-xs font-black text-purple-500 uppercase tracking-tighter mb-4">Languages</h4>
+                <div class="flex flex-wrap gap-2 mt-2">
+                    <span class="text-[9px] font-bold px-2 py-1 bg-white/10 rounded">Kannada</span>
+                    <span class="text-[9px] font-bold px-2 py-1 bg-white/10 rounded">Telugu</span>
+                    <span class="text-[9px] font-bold px-2 py-1 bg-white/10 rounded">Hindi</span>
+                    <span class="text-[9px] font-bold px-2 py-1 bg-white/10 rounded text-purple-400">German</span>
+                </div>
+            </div>
         </div>
     </section>
 
-    <footer class="py-20 px-6 max-w-6xl mx-auto text-center">
-        <a href="mailto:tejasreeravikumar96@gmail.com" class="text-2xl font-bold hover:text-purple-500 transition break-all">tejasreeravikumar96@gmail.com</a>
-        <p class="mt-8 text-gray-600 text-[10px] tracking-[0.4em] uppercase">R. Tejasree • Aspiring Professor • 2026</p>
+    <footer class="py-40 px-8 text-center">
+        <div class="reveal">
+            <h2 class="text-6xl md:text-8xl font-black tracking-tighter mb-10 italic underline decoration-purple-500/20">Let's talk Research.</h2>
+            <a href="mailto:tejasreeravikumar96@gmail.com" class="text-xl md:text-3xl font-bold text-purple-500 hover:text-white transition-all">tejasreeravikumar96@gmail.com</a>
+        </div>
+        <p class="mt-40 text-gray-600 text-[10px] font-black uppercase tracking-[0.8em]">R. Tejasree • MMXXVI</p>
     </footer>
 
-    <script>lucide.createIcons();</script>
+    <script>
+        lucide.createIcons();
+
+        // Custom Cursor Logic
+        const cursor = document.getElementById('cursor');
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.left = e.clientX + 'px';
+            cursor.style.top = e.clientY + 'px';
+        });
+
+        // Scroll Reveal Logic
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
 </body>
 </html>
