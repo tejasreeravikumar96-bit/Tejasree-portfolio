@@ -11,7 +11,6 @@
         :root { --accent: #a855f7; --bg: #050505; }
         body { background-color: var(--bg); color: #ffffff; font-family: 'Plus Jakarta Sans', sans-serif; overflow-x: hidden; }
         
-        /* Smooth Background Animation */
         .bg-gradient-blur {
             position: fixed; top: 0; left: 0; width: 100%; height: 100%;
             background: radial-gradient(circle at 10% 10%, rgba(168, 85, 247, 0.08) 0%, transparent 40%),
@@ -19,11 +18,9 @@
             z-index: -1;
         }
 
-        /* Modern Typography */
         .hero-title { font-family: 'Space Grotesk', sans-serif; line-height: 0.85; letter-spacing: -0.05em; font-size: clamp(3.5rem, 10vw, 130px); }
         .gradient-text { background: linear-gradient(135deg, #fff 30%, var(--accent) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
 
-        /* Project Cards */
         .project-card {
             background: rgba(255, 255, 255, 0.02);
             border: 1px solid rgba(255, 255, 255, 0.05);
@@ -32,20 +29,14 @@
         .project-card:hover {
             border-color: var(--accent);
             background: rgba(168, 85, 247, 0.04);
-            transform: translateY(-10px) scale(1.01);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+            transform: translateY(-10px);
         }
 
-        /* Marquee Animation */
         @keyframes scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
         .marquee-content { display: flex; animation: scroll 30s linear infinite; width: max-content; }
 
         .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out; }
         .reveal.active { opacity: 1; transform: translateY(0); }
-
-        /* Email Hover Effect */
-        .email-link { font-family: 'Outfit', sans-serif; transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1); }
-        .email-link:hover { letter-spacing: -0.02em; color: var(--accent); }
     </style>
 </head>
 <body class="selection:bg-purple-500/30">
@@ -53,9 +44,10 @@
 
     <nav class="fixed top-0 w-full z-50 px-8 py-6 flex justify-between items-center backdrop-blur-md border-b border-white/5">
         <div class="text-2xl font-black italic tracking-tighter">RT<span class="text-purple-500">.</span></div>
-        <div class="flex items-center gap-8">
-            <a href="#projects" class="text-[10px] font-bold uppercase tracking-widest text-gray-400 hover:text-white transition">Research</a>
-            <a href="mailto:tejasreeravikumar96@gmail.com" class="px-5 py-2 bg-white text-black text-[10px] font-black uppercase rounded-full hover:bg-purple-500 hover:text-white transition">Hire Me</a>
+        <div class="flex items-center gap-8 text-[10px] font-bold uppercase tracking-widest text-gray-400">
+            <a href="#projects" class="hover:text-white transition">Projects</a>
+            <a href="#about" class="hover:text-white transition">About</a>
+            <a href="mailto:tejasreeravikumar96@gmail.com" class="px-5 py-2 bg-white text-black rounded-full hover:bg-purple-500 hover:text-white transition">Contact</a>
         </div>
     </nav>
 
@@ -64,7 +56,7 @@
             <div class="reveal">
                 <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-purple-500/20 bg-purple-500/5 text-purple-400 text-[10px] font-bold uppercase tracking-widest">
                     <span class="w-2 h-2 bg-purple-500 rounded-full animate-pulse"></span>
-                    Available for Research Collaborations
+                    Tirupati, India
                 </div>
             </div>
             
@@ -74,29 +66,16 @@
             </h1>
 
             <p class="text-gray-400 text-xl md:text-2xl max-w-2xl leading-relaxed reveal font-light">
-                An AI & Data Science visionary bridging technical excellence with <span class="text-white border-b border-purple-900">social activism</span>. 
-                Preparing for a future in <span class="text-white font-bold italic">Academia</span> through rigorous research in ML, DL, and DWDM.
+                AI Researcher & Data Science student. I specialize in <span class="text-white">ML, DL, and DWDM</span> to create high-impact social solutions.
             </p>
 
             <div class="pt-8 reveal">
-                <h4 class="text-[10px] font-black text-gray-500 uppercase tracking-[0.3em] mb-4">Language Proficiency</h4>
+                <h4 class="text-[10px] font-black text-gray-500 uppercase tracking-[0.3em] mb-4">Languages</h4>
                 <div class="flex flex-wrap gap-3">
-                    <div class="px-4 py-2 project-card rounded-xl">
-                        <p class="text-[9px] text-purple-400 font-bold uppercase mb-1">English</p>
-                        <p class="text-xs font-bold">Fluent</p>
-                    </div>
-                    <div class="px-4 py-2 project-card rounded-xl">
-                        <p class="text-[9px] text-purple-400 font-bold uppercase mb-1">Kannada</p>
-                        <p class="text-xs font-bold">Native</p>
-                    </div>
-                    <div class="px-4 py-2 project-card rounded-xl">
-                        <p class="text-[9px] text-purple-400 font-bold uppercase mb-1">Telugu</p>
-                        <p class="text-xs font-bold">Fluent</p>
-                    </div>
-                    <div class="px-4 py-2 project-card rounded-xl">
-                        <p class="text-[9px] text-purple-400 font-bold uppercase mb-1">Hindi</p>
-                        <p class="text-xs font-bold">Fluent</p>
-                    </div>
+                    <span class="px-4 py-2 project-card rounded-xl text-xs font-bold">English (Fluent)</span>
+                    <span class="px-4 py-2 project-card rounded-xl text-xs font-bold">Kannada (Native)</span>
+                    <span class="px-4 py-2 project-card rounded-xl text-xs font-bold">Telugu (Fluent)</span>
+                    <span class="px-4 py-2 project-card rounded-xl text-xs font-bold">Hindi (Fluent)</span>
                 </div>
             </div>
         </div>
@@ -104,14 +83,14 @@
         <div class="lg:col-span-5 relative reveal">
             <div class="relative group">
                 <div class="absolute -inset-4 bg-purple-500/10 rounded-[4rem] blur-2xl group-hover:bg-purple-500/20 transition duration-700"></div>
-                <img src="profile.jpg.png" alt="R. Tejasree" class="relative w-full max-w-[440px] rounded-[3.5rem] border border-white/10 shadow-2xl grayscale hover:grayscale-0 transition duration-700 object-cover aspect-[4/5]">
+                <img src="profile.jpg.png" alt="R. Tejasree" class="relative w-full max-w-[440px] rounded-[3.5rem] border border-white/10 shadow-2xl grayscale hover:grayscale-0 transition duration-700 aspect-[4/5] object-cover">
                 
                 <div class="absolute -bottom-8 -left-12 project-card p-6 rounded-3xl flex items-center gap-5 shadow-2xl min-w-[260px] backdrop-blur-xl">
-                    <div class="w-14 h-14 bg-gradient-to-tr from-purple-600 to-indigo-600 rounded-2xl flex items-center justify-center shadow-lg">
+                    <div class="w-14 h-14 bg-purple-600 rounded-2xl flex items-center justify-center">
                         <i data-lucide="mic-2" class="text-white"></i>
                     </div>
                     <div>
-                        <p class="text-[10px] uppercase font-black text-purple-400 tracking-[0.2em] mb-1">Artist Profile</p>
+                        <p class="text-[10px] uppercase font-black text-purple-400 tracking-[0.2em] mb-1">Passionate</p>
                         <p class="text-lg font-bold text-white leading-none">Vocalist & Singer</p>
                     </div>
                 </div>
@@ -121,104 +100,46 @@
 
     <div class="py-12 border-y border-white/5 bg-white/[0.01] overflow-hidden">
         <div class="marquee-content gap-12 text-2xl font-bold uppercase italic tracking-tighter opacity-20">
-            <span>Machine Learning</span> <span>Deep Learning</span> <span>Data Mining</span> <span>SQL</span> <span>Weka</span> <span>Orange</span> <span>Python</span> <span>Java</span> <span>Social Activism</span>
-            <span>Machine Learning</span> <span>Deep Learning</span> <span>Data Mining</span> <span>SQL</span> <span>Weka</span> <span>Orange</span> <span>Python</span> <span>Java</span> <span>Social Activism</span>
+            <span>Machine Learning</span> <span>Deep Learning</span> <span>SQL</span> <span>DWDM</span> <span>Social Activism</span> <span>Academic Research</span>
+            <span>Machine Learning</span> <span>Deep Learning</span> <span>SQL</span> <span>DWDM</span> <span>Social Activism</span> <span>Academic Research</span>
         </div>
     </div>
 
     <section id="projects" class="py-32 px-8 max-w-7xl mx-auto">
-        <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-4">
-            <div>
-                <h2 class="text-xs font-black text-purple-500 uppercase tracking-[0.4em] mb-4">Portfolio</h2>
-                <h3 class="text-5xl font-bold tracking-tighter italic">Strategic Research</h3>
-            </div>
-            <p class="text-gray-500 text-sm max-w-xs uppercase font-bold tracking-widest text-right">Bridging AI with human-centric solutions.</p>
-        </div>
-
+        <h2 class="text-xs font-black text-purple-500 uppercase tracking-[0.4em] mb-16">Active Research & Projects</h2>
         <div class="grid md:grid-cols-2 gap-10">
             <div class="project-card p-12 rounded-[3rem] reveal group">
-                <div class="flex justify-between items-start mb-10">
-                    <div class="p-5 bg-emerald-500/10 rounded-3xl text-emerald-500 group-hover:scale-110 transition"><i data-lucide="shield-check" size="32"></i></div>
-                    <div class="text-right">
-                        <span class="text-[10px] font-black text-emerald-500 tracking-widest uppercase">Deployed</span>
-                        <p class="text-xs text-gray-500 mt-1">Status: Success</p>
-                    </div>
-                </div>
-                <h4 class="text-3xl font-bold mb-4 italic">Citizen Helper AI</h4>
-                <p class="text-gray-400 leading-relaxed text-lg font-light mb-8">A high-impact LLM implementation designed to simplify civic engagement and local administration queries.</p>
+                <h4 class="text-2xl font-bold mb-4">Citizen Helper AI</h4>
+                <p class="text-gray-400 font-light mb-8">Successfully deployed AI assistant facilitating local community administration tasks.</p>
+                <span class="text-[10px] font-black text-emerald-500 uppercase">Deployed Success</span>
             </div>
-
             <div class="project-card p-12 rounded-[3rem] reveal group">
-                <div class="flex justify-between items-start mb-10">
-                    <div class="p-5 bg-purple-500/10 rounded-3xl text-purple-500 group-hover:scale-110 transition"><i data-lucide="graduation-cap" size="32"></i></div>
-                    <div class="text-right">
-                        <span class="text-[10px] font-black text-purple-500 tracking-widest uppercase">Live</span>
-                        <p class="text-xs text-gray-500 mt-1">Platform: Streamlit</p>
-                    </div>
-                </div>
-                <h4 class="text-3xl font-bold mb-4 italic">AI Tutor</h4>
-                <p class="text-gray-400 leading-relaxed text-lg font-light mb-8">Personalized learning architecture using intelligent agents to explain complex Data Science concepts.</p>
+                <h4 class="text-2xl font-bold mb-4">AI Tutor</h4>
+                <p class="text-gray-400 font-light mb-8">Streamlit-based platform designed for interactive and personalized technical education.</p>
+                <span class="text-[10px] font-black text-purple-500 uppercase">Live Platform</span>
+            </div>
+            <div class="project-card p-12 rounded-[3rem] border-dashed reveal">
+                <h4 class="text-2xl font-bold mb-4 italic text-gray-300">Ryoko Aibo</h4>
+                <p class="text-gray-500 font-light">Predictive travel management buddy currently in development phase.</p>
+                <p class="text-[10px] font-bold mt-4 text-gray-600 uppercase">Ongoing Research</p>
+            </div>
+            <div class="project-card p-12 rounded-[3rem] border-dashed reveal">
+                <h4 class="text-2xl font-bold mb-4 italic text-gray-300">Talk Therapy</h4>
+                <p class="text-gray-500 font-light">Focus-centric distraction-curing application designed for mental well-being.</p>
+                <p class="text-[10px] font-bold mt-4 text-gray-600 uppercase">Ongoing Research</p>
             </div>
         </div>
     </section>
 
-    <section class="py-32 bg-white/[0.02] border-y border-white/5">
-        <div class="max-w-7xl mx-auto px-8 grid lg:grid-cols-3 gap-16">
-            <div class="reveal">
-                <h5 class="text-purple-500 font-black text-xs uppercase tracking-[0.4em] mb-6">Expertise Stack</h5>
-                <ul class="space-y-4 text-xl font-bold">
-                    <li class="flex items-center gap-4"><span class="w-1.5 h-1.5 bg-purple-500 rounded-full"></span> Machine Learning</li>
-                    <li class="flex items-center gap-4"><span class="w-1.5 h-1.5 bg-purple-500 rounded-full"></span> Deep Learning</li>
-                    <li class="flex items-center gap-4"><span class="w-1.5 h-1.5 bg-purple-500 rounded-full"></span> DWDM / Data Mining</li>
-                    <li class="flex items-center gap-4"><span class="w-1.5 h-1.5 bg-purple-500 rounded-full"></span> SQL Mastery</li>
-                </ul>
-            </div>
-            <div class="reveal">
-                <h5 class="text-purple-500 font-black text-xs uppercase tracking-[0.4em] mb-6">Toolbox</h5>
-                <div class="flex flex-wrap gap-3">
-                    <span class="px-4 py-2 project-card rounded-xl text-xs font-bold uppercase">Weka</span>
-                    <span class="px-4 py-2 project-card rounded-xl text-xs font-bold uppercase">Orange</span>
-                    <span class="px-4 py-2 project-card rounded-xl text-xs font-bold uppercase">Streamlit</span>
-                    <span class="px-4 py-2 project-card rounded-xl text-xs font-bold uppercase">Tableau</span>
-                </div>
-            </div>
-            <div class="reveal">
-                <h5 class="text-purple-500 font-black text-xs uppercase tracking-[0.4em] mb-6">Vision</h5>
-                <p class="text-gray-400 font-light leading-relaxed">
-                    Dedicated to becoming an <span class="text-white font-bold">Academic Professor</span>. My goal is to mentor the next generation while maintaining active participation in <span class="text-white font-bold italic">Social Activism</span> and community building.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <footer class="py-40 px-8 border-t border-white/5 relative">
-        <div class="max-w-7xl mx-auto text-center reveal">
-            <div class="inline-flex items-center gap-3 px-4 py-2 rounded-full border border-white/5 bg-white/[0.02] mb-12">
-                <span class="w-1.5 h-1.5 bg-purple-500 rounded-full animate-pulse"></span>
-                <p class="text-[10px] font-bold uppercase tracking-[0.4em] text-gray-500">Contact for Academic Inquiries</p>
-            </div>
-
-            <div class="group relative inline-block mb-32">
-                <a href="mailto:tejasreeravikumar96@gmail.com" class="email-link relative text-4xl md:text-7xl font-black italic text-white block">
-                   tejasreeravikumar96<span class="text-purple-500 group-hover:text-white transition-colors">@</span>gmail.com
-                </a>
-                <div class="absolute -bottom-4 left-0 w-0 h-[2px] bg-gradient-to-r from-transparent via-purple-500 to-transparent group-hover:w-full transition-all duration-1000 ease-in-out"></div>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 items-center gap-8 pt-20 border-t border-white/5 opacity-60">
-                <div class="text-left hidden md:block">
-                    <p class="text-[9px] font-black uppercase tracking-[0.3em] text-gray-600">Location</p>
-                    <p class="text-xs font-bold text-gray-400 mt-1">Bengaluru, India</p>
-                </div>
-
-                <div class="space-y-4">
-                    <p class="text-gray-400 text-[10px] font-black uppercase tracking-[1em]">R. Tejasree • MMXXVI</p>
-                </div>
-
-                <div class="text-right hidden md:block">
-                    <p class="text-[9px] font-black uppercase tracking-[0.3em] text-gray-600">Primary Goal</p>
-                    <p class="text-xs font-bold text-gray-400 mt-1 uppercase">Aspiring Professor</p>
-                </div>
+    <footer class="py-40 px-8 border-t border-white/5 text-center">
+        <div class="reveal">
+            <h2 class="text-4xl md:text-7xl font-black italic mb-12 hover:text-purple-500 transition-all duration-500">
+                tejasreeravikumar96@gmail.com
+            </h2>
+            <div class="flex flex-col md:flex-row justify-between items-center gap-8 opacity-40 text-[10px] font-bold uppercase tracking-[0.3em]">
+                <p>R. Tejasree • 2026</p>
+                <p>Location: Tirupati, India</p>
+                <p>Aspiring Professor</p>
             </div>
         </div>
     </footer>
