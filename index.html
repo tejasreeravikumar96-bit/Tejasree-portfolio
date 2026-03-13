@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>R. Tejasree | AI Researcher & Aspiring Professor</title>
+    <title>R. Tejasree | AI Researcher & Activist</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&family=Space+Grotesk:wght@500;700&family=Outfit:wght@500;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
     <style>
         :root { --accent: #a855f7; --bg: #050505; }
         body { background-color: var(--bg); color: #ffffff; font-family: 'Plus Jakarta Sans', sans-serif; overflow-x: hidden; }
@@ -21,15 +21,15 @@
         .hero-title { font-family: 'Space Grotesk', sans-serif; line-height: 0.85; letter-spacing: -0.05em; font-size: clamp(3.5rem, 10vw, 130px); }
         .gradient-text { background: linear-gradient(135deg, #fff 30%, var(--accent) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
 
-        .project-card {
+        .glass-card {
             background: rgba(255, 255, 255, 0.02);
             border: 1px solid rgba(255, 255, 255, 0.05);
             transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
         }
-        .project-card:hover {
+        .glass-card:hover {
             border-color: var(--accent);
             background: rgba(168, 85, 247, 0.04);
-            transform: translateY(-10px);
+            transform: translateY(-8px);
         }
 
         @keyframes scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
@@ -43,11 +43,10 @@
     <div class="bg-gradient-blur"></div>
 
     <nav class="fixed top-0 w-full z-50 px-8 py-6 flex justify-between items-center backdrop-blur-md border-b border-white/5">
-        <div class="text-2xl font-black italic tracking-tighter">RT<span class="text-purple-500">.</span></div>
+        <div class="text-xl font-black italic tracking-tighter text-white">R. Tejasree<span class="text-purple-500">.</span></div>
         <div class="flex items-center gap-8 text-[10px] font-bold uppercase tracking-widest text-gray-400">
-            <a href="#projects" class="hover:text-white transition">Projects</a>
-            <a href="#about" class="hover:text-white transition">About</a>
-            <a href="mailto:tejasreeravikumar96@gmail.com" class="px-5 py-2 bg-white text-black rounded-full hover:bg-purple-500 hover:text-white transition">Contact</a>
+            <a href="#projects" class="hover:text-white transition">Research</a>
+            <a href="mailto:tejasreeravikumar96@gmail.com" class="px-6 py-2 bg-white text-black rounded-full hover:bg-purple-500 hover:text-white transition-all duration-300">Contact</a>
         </div>
     </nav>
 
@@ -56,7 +55,7 @@
             <div class="reveal">
                 <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-purple-500/20 bg-purple-500/5 text-purple-400 text-[10px] font-bold uppercase tracking-widest">
                     <span class="w-2 h-2 bg-purple-500 rounded-full animate-pulse"></span>
-                    Tirupati, India
+                    Based in Tirupati • Academic Visionary
                 </div>
             </div>
             
@@ -65,17 +64,22 @@
                 <span class="gradient-text">Tejasree</span>
             </h1>
 
-            <p class="text-gray-400 text-xl md:text-2xl max-w-2xl leading-relaxed reveal font-light">
-                AI Researcher & Data Science student. I specialize in <span class="text-white">ML, DL, and DWDM</span> to create high-impact social solutions.
-            </p>
+            <div class="space-y-6 reveal text-gray-300 text-xl leading-relaxed font-light max-w-2xl">
+                <p>
+                    I am a dedicated <span class="text-white font-medium">AI Researcher</span> and social activist committed to the intersection of technological advancement and community empowerment. My work is defined by a desire to translate complex data structures into tools for societal progress.
+                </p>
+                <p>
+                    With a primary focus on entering <span class="text-white font-medium">Academia</span>, I am building a foundation to serve as a Professor who mentors with purpose. I believe that artificial intelligence should not just be efficient, but empathetic—a philosophy I carry into every research initiative and social endeavor.
+                </p>
+            </div>
 
             <div class="pt-8 reveal">
-                <h4 class="text-[10px] font-black text-gray-500 uppercase tracking-[0.3em] mb-4">Languages</h4>
+                <h4 class="text-[10px] font-black text-gray-500 uppercase tracking-[0.3em] mb-4">Linguistic Proficiency</h4>
                 <div class="flex flex-wrap gap-3">
-                    <span class="px-4 py-2 project-card rounded-xl text-xs font-bold">English (Fluent)</span>
-                    <span class="px-4 py-2 project-card rounded-xl text-xs font-bold">Kannada (Native)</span>
-                    <span class="px-4 py-2 project-card rounded-xl text-xs font-bold">Telugu (Fluent)</span>
-                    <span class="px-4 py-2 project-card rounded-xl text-xs font-bold">Hindi (Fluent)</span>
+                    <span class="px-5 py-2 glass-card rounded-xl text-xs font-bold border-l-2 border-l-purple-500">English (Fluent)</span>
+                    <span class="px-5 py-2 glass-card rounded-xl text-xs font-bold border-l-2 border-l-purple-500">Kannada (Native)</span>
+                    <span class="px-5 py-2 glass-card rounded-xl text-xs font-bold border-l-2 border-l-purple-500">Telugu (Fluent)</span>
+                    <span class="px-5 py-2 glass-card rounded-xl text-xs font-bold border-l-2 border-l-purple-500">Hindi (Fluent)</span>
                 </div>
             </div>
         </div>
@@ -85,12 +89,12 @@
                 <div class="absolute -inset-4 bg-purple-500/10 rounded-[4rem] blur-2xl group-hover:bg-purple-500/20 transition duration-700"></div>
                 <img src="profile.jpg.png" alt="R. Tejasree" class="relative w-full max-w-[440px] rounded-[3.5rem] border border-white/10 shadow-2xl grayscale hover:grayscale-0 transition duration-700 aspect-[4/5] object-cover">
                 
-                <div class="absolute -bottom-8 -left-12 project-card p-6 rounded-3xl flex items-center gap-5 shadow-2xl min-w-[260px] backdrop-blur-xl">
-                    <div class="w-14 h-14 bg-purple-600 rounded-2xl flex items-center justify-center">
+                <div class="absolute -bottom-8 -left-12 glass-card p-6 rounded-3xl flex items-center gap-5 shadow-2xl min-w-[260px] backdrop-blur-xl">
+                    <div class="w-14 h-14 bg-gradient-to-tr from-purple-600 to-indigo-600 rounded-2xl flex items-center justify-center shadow-lg">
                         <i data-lucide="mic-2" class="text-white"></i>
                     </div>
                     <div>
-                        <p class="text-[10px] uppercase font-black text-purple-400 tracking-[0.2em] mb-1">Passionate</p>
+                        <p class="text-[10px] uppercase font-black text-purple-400 tracking-[0.2em] mb-1">Creative</p>
                         <p class="text-lg font-bold text-white leading-none">Vocalist & Singer</p>
                     </div>
                 </div>
@@ -98,48 +102,63 @@
         </div>
     </section>
 
-    <div class="py-12 border-y border-white/5 bg-white/[0.01] overflow-hidden">
-        <div class="marquee-content gap-12 text-2xl font-bold uppercase italic tracking-tighter opacity-20">
-            <span>Machine Learning</span> <span>Deep Learning</span> <span>SQL</span> <span>DWDM</span> <span>Social Activism</span> <span>Academic Research</span>
-            <span>Machine Learning</span> <span>Deep Learning</span> <span>SQL</span> <span>DWDM</span> <span>Social Activism</span> <span>Academic Research</span>
+    <section id="projects" class="py-32 px-8 max-w-7xl mx-auto border-t border-white/5">
+        <div class="flex justify-between items-end mb-16">
+            <div>
+                <h2 class="text-xs font-black text-purple-500 uppercase tracking-[0.4em] mb-4">Research Portfolio</h2>
+                <h3 class="text-4xl font-bold italic tracking-tighter">Strategic Deployments</h3>
+            </div>
         </div>
-    </div>
-
-    <section id="projects" class="py-32 px-8 max-w-7xl mx-auto">
-        <h2 class="text-xs font-black text-purple-500 uppercase tracking-[0.4em] mb-16">Active Research & Projects</h2>
+        
         <div class="grid md:grid-cols-2 gap-10">
-            <div class="project-card p-12 rounded-[3rem] reveal group">
+            <div class="glass-card p-12 rounded-[3rem] reveal group">
+                <div class="flex justify-between mb-8">
+                    <i data-lucide="globe" class="text-purple-500"></i>
+                    <span class="text-[10px] font-black text-emerald-500 uppercase tracking-widest">Live Deployment</span>
+                </div>
                 <h4 class="text-2xl font-bold mb-4">Citizen Helper AI</h4>
-                <p class="text-gray-400 font-light mb-8">Successfully deployed AI assistant facilitating local community administration tasks.</p>
-                <span class="text-[10px] font-black text-emerald-500 uppercase">Deployed Success</span>
+                <p class="text-gray-400 font-light leading-relaxed">An intelligent framework designed to simplify complex civic administration for the general public.</p>
             </div>
-            <div class="project-card p-12 rounded-[3rem] reveal group">
+
+            <div class="glass-card p-12 rounded-[3rem] reveal group">
+                <div class="flex justify-between mb-8">
+                    <i data-lucide="book-open" class="text-purple-500"></i>
+                    <span class="text-[10px] font-black text-purple-400 uppercase tracking-widest">Active Project</span>
+                </div>
                 <h4 class="text-2xl font-bold mb-4">AI Tutor</h4>
-                <p class="text-gray-400 font-light mb-8">Streamlit-based platform designed for interactive and personalized technical education.</p>
-                <span class="text-[10px] font-black text-purple-500 uppercase">Live Platform</span>
+                <p class="text-gray-400 font-light leading-relaxed">Streamlit-powered interactive learning environment for democratizing data science education.</p>
             </div>
-            <div class="project-card p-12 rounded-[3rem] border-dashed reveal">
-                <h4 class="text-2xl font-bold mb-4 italic text-gray-300">Ryoko Aibo</h4>
-                <p class="text-gray-500 font-light">Predictive travel management buddy currently in development phase.</p>
-                <p class="text-[10px] font-bold mt-4 text-gray-600 uppercase">Ongoing Research</p>
+
+            <div class="glass-card p-12 rounded-[3rem] border-dashed reveal">
+                <div class="mb-8 opacity-20"><i data-lucide="compass"></i></div>
+                <h4 class="text-2xl font-bold mb-4 italic text-gray-400">Ryoko Aibo</h4>
+                <p class="text-gray-500 font-light">Advanced predictive research into travel logistics and itinerary optimization.</p>
+                <p class="text-[9px] font-black mt-6 text-gray-600 uppercase tracking-widest">Status: In Development</p>
             </div>
-            <div class="project-card p-12 rounded-[3rem] border-dashed reveal">
-                <h4 class="text-2xl font-bold mb-4 italic text-gray-300">Talk Therapy</h4>
-                <p class="text-gray-500 font-light">Focus-centric distraction-curing application designed for mental well-being.</p>
-                <p class="text-[10px] font-bold mt-4 text-gray-600 uppercase">Ongoing Research</p>
+
+            <div class="glass-card p-12 rounded-[3rem] border-dashed reveal">
+                <div class="mb-8 opacity-20"><i data-lucide="heart-pulse"></i></div>
+                <h4 class="text-2xl font-bold mb-4 italic text-gray-400">Talk Therapy</h4>
+                <p class="text-gray-500 font-light">Neuro-focus modeling aimed at mitigating digital distractions for mental health.</p>
+                <p class="text-[9px] font-black mt-6 text-gray-600 uppercase tracking-widest">Status: Research Phase</p>
             </div>
         </div>
     </section>
 
-    <footer class="py-40 px-8 border-t border-white/5 text-center">
+    <footer class="py-40 px-8 border-t border-white/5 text-center relative overflow-hidden">
         <div class="reveal">
-            <h2 class="text-4xl md:text-7xl font-black italic mb-12 hover:text-purple-500 transition-all duration-500">
-                tejasreeravikumar96@gmail.com
-            </h2>
-            <div class="flex flex-col md:flex-row justify-between items-center gap-8 opacity-40 text-[10px] font-bold uppercase tracking-[0.3em]">
-                <p>R. Tejasree • 2026</p>
-                <p>Location: Tirupati, India</p>
-                <p>Aspiring Professor</p>
+            <p class="text-[10px] font-bold uppercase tracking-[0.5em] text-gray-600 mb-12">Get in touch for academic collaborations</p>
+            <a href="mailto:tejasreeravikumar96@gmail.com" class="text-3xl md:text-6xl font-black italic text-white hover:text-purple-500 transition-all duration-700 break-all">
+                tejasreeravikumar96<span class="text-purple-500">@</span>gmail.com
+            </a>
+            
+            <div class="mt-32 pt-12 flex flex-col md:flex-row justify-between items-center border-t border-white/5 gap-8 opacity-40 text-[10px] font-bold uppercase tracking-[0.3em]">
+                <p>R. Tejasree • Tirupati, India</p>
+                <div class="flex gap-6">
+                    <a href="https://linkedin.com/in/teju-r-tech" class="hover:text-white transition">LinkedIn</a>
+                    <a href="https://github.com/tejasreeravikumar96-bit" class="hover:text-white transition">GitHub</a>
+                </div>
+                <p>© 2026 Aspiring Professor</p>
             </div>
         </div>
     </footer>
