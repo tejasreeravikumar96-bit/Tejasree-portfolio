@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>R. Tejasree | AI & Data Science Portfolio</title>
+    <title>R. Tejasree | AI & DS Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
@@ -11,7 +11,7 @@
         body { background-color: #030303; color: #ffffff; font-family: 'Plus Jakarta Sans', sans-serif; scroll-behavior: smooth; }
         .bg-glow { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: radial-gradient(circle at 50% -20%, #3b0764 0%, transparent 50%); z-index: -1; }
         .glass-card { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.08); transition: all 0.3s ease; }
-        .glass-card:hover { border-color: #a855f7; transform: translateY(-5px); box-shadow: 0 10px 30px -10px rgba(168, 85, 247, 0.3); }
+        .glass-card:hover { border-color: #a855f7; transform: translateY(-3px); box-shadow: 0 10px 30px -10px rgba(168, 85, 247, 0.3); }
         .gradient-text { background: linear-gradient(to right, #fff 20%, #a855f7 50%, #6366f1 80%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-size: 200% auto; animation: textShine 5s linear infinite; }
         @keyframes textShine { to { background-position: 200% center; } }
     </style>
@@ -20,83 +20,136 @@
     <div class="bg-glow"></div>
 
     <nav class="fixed top-0 w-full z-50 px-6 py-4 flex justify-between items-center backdrop-blur-md border-b border-white/5">
-        <div class="text-xl font-extrabold tracking-tighter">TEJASREE<span class="text-purple-500">.</span>AI</div>
-        <div class="hidden md:flex gap-8 text-sm font-medium text-gray-400">
-            <a href="#about" class="hover:text-white transition">About</a>
-            <a href="#skills" class="hover:text-white transition">Core Stack</a>
-            <a href="#contact" class="hover:text-white transition">Contact</a>
+        <div class="text-xl font-extrabold tracking-tighter italic">RT<span class="text-purple-500">.</span>AI</div>
+        <div class="hidden md:flex gap-8 text-xs font-bold uppercase tracking-widest text-gray-400">
+            <a href="#projects" class="hover:text-white transition">Projects</a>
+            <a href="#skills" class="hover:text-white transition">Technical Stack</a>
+            <a href="#languages" class="hover:text-white transition">Languages</a>
         </div>
-        <a href="mailto:tejasreeravikumar96@gmail.com" class="px-5 py-2 bg-white text-black text-sm font-bold rounded-full hover:bg-purple-500 hover:text-white transition">Hire Me</a>
+        <a href="mailto:tejasreeravikumar96@gmail.com" class="px-5 py-2 bg-purple-600 text-white text-xs font-bold rounded-full hover:bg-purple-500 transition">Get In Touch</a>
     </nav>
 
     <section id="about" class="pt-32 pb-20 px-6 max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12">
-        <div class="flex-1 space-y-6">
+        <div class="flex-1 space-y-4">
             <div class="inline-block px-3 py-1 rounded-full border border-purple-500/30 bg-purple-500/10 text-purple-400 text-xs font-bold uppercase tracking-widest">
                 AI Student & Social Activist
             </div>
-            <h1 class="text-6xl md:text-8xl font-extrabold leading-tight">
-                Hi, I'm <span class="gradient-text">R. Tejasree</span>
+            <h1 class="text-6xl md:text-8xl font-extrabold leading-[0.9] tracking-tighter">
+                Hi, I'm <br>
+                <span class="gradient-text">R. Tejasree</span>
             </h1>
             <p class="text-gray-400 text-lg max-w-xl leading-relaxed">
-                A passionate **AI & Data Science student** and **social activist**. I combine technical rigor with a drive for social change—leveraging data to empower communities and teaching to inspire the next generation.
+                An AI & Data Science student, social activist, and passionate educator. I build intelligent systems to solve real-world problems—from mental health to travel management.
             </p>
-            <div class="flex gap-4">
+            <div class="flex gap-4 pt-4">
                 <a href="https://github.com/tejasreeravikumar96-bit" target="_blank" class="p-3 glass-card rounded-xl"><i data-lucide="github"></i></a>
                 <a href="https://www.linkedin.com/in/teju-r-tech" target="_blank" class="p-3 glass-card rounded-xl"><i data-lucide="linkedin"></i></a>
-                <a href="mailto:tejasreeravikumar96@gmail.com" class="p-3 glass-card rounded-xl"><i data-lucide="mail"></i></a>
+                <div class="flex items-center gap-2 px-4 py-2 glass-card rounded-xl text-xs font-medium">
+                    <i data-lucide="music" size="14" class="text-purple-400"></i> Vocalist
+                </div>
             </div>
         </div>
         
         <div class="relative group">
-            <div class="absolute -inset-1 bg-gradient-to-r from-purple-600 to-blue-600 rounded-full blur opacity-25 group-hover:opacity-50 transition duration-1000"></div>
-            <img src="me.jpg" alt="R. Tejasree" class="relative w-64 h-64 md:w-80 md:h-80 rounded-full object-cover border-4 border-[#030303] shadow-2xl">
+            <div class="absolute -inset-1 bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl blur opacity-20 group-hover:opacity-40 transition duration-1000"></div>
+            <img src="me.jpg" alt="R. Tejasree" class="relative w-64 h-80 md:w-80 md:h-[450px] rounded-2xl object-cover border border-white/10 shadow-2xl">
         </div>
     </section>
 
-    <section id="skills" class="py-20 px-6 max-w-6xl mx-auto">
-        <h2 class="text-3xl font-bold mb-12 flex items-center gap-4">
-            <span class="h-px w-12 bg-purple-500"></span> Expertise & Passions
-        </h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-            <div class="glass-card p-6 rounded-2xl">
-                <i data-lucide="brain" class="text-purple-500 mb-4"></i>
-                <h4 class="font-bold mb-2">Machine Learning</h4>
-                <p class="text-xs text-gray-500">Predictive modeling, Neural Networks, and Scikit-learn architectures.</p>
+    <section id="projects" class="py-20 px-6 max-w-6xl mx-auto">
+        <h2 class="text-3xl font-bold mb-10 flex items-center gap-4">Featured Projects</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="glass-card p-8 rounded-3xl">
+                <h3 class="text-xl font-bold mb-2">Ryoko Aibo</h3>
+                <p class="text-sm text-purple-400 font-medium mb-4">Travel Management Buddy</p>
+                <p class="text-gray-400 text-sm mb-6">A smart travel companion app designed to streamline itinerary planning and budget management for modern travelers.</p>
+                <div class="flex gap-2 font-mono text-[10px] uppercase tracking-wider opacity-60">
+                    <span>Python</span> • <span>ML</span> • <span>API Integration</span>
+                </div>
             </div>
-            <div class="glass-card p-6 rounded-2xl">
-                <i data-lucide="users" class="text-blue-500 mb-4"></i>
-                <h4 class="font-bold mb-2">Social Activism</h4>
-                <p class="text-xs text-gray-500">Leading student organizations and driving community-focused initiatives.</p>
+            <div class="glass-card p-8 rounded-3xl">
+                <h3 class="text-xl font-bold mb-2">Talk Therapy</h3>
+                <p class="text-sm text-purple-400 font-medium mb-4">Mental Health & Schedule Planner</p>
+                <p class="text-gray-400 text-sm mb-6">A distraction-curing app that integrates schedule planning with mental health tracking to improve student focus and well-being.</p>
+                <div class="flex gap-2 font-mono text-[10px] uppercase tracking-wider opacity-60">
+                    <span>UI/UX</span> • <span>Logic</span> • <span>Mental Health Tech</span>
+                </div>
             </div>
-            <div class="glass-card p-6 rounded-2xl">
-                <i data-lucide="book-open" class="text-emerald-500 mb-4"></i>
-                <h4 class="font-bold mb-2">Teaching</h4>
-                <p class="text-xs text-gray-500">Passionate about simplifying complex AI concepts for fellow learners.</p>
+            <div class="glass-card p-8 rounded-3xl">
+                <h3 class="text-xl font-bold mb-2">AI Tutor</h3>
+                <p class="text-sm text-purple-400 font-medium mb-4">Educational Assistant</p>
+                <p class="text-gray-400 text-sm mb-6">Interactive AI-powered tutoring platform built using Streamlit to facilitate easier learning for complex technical subjects.</p>
+                <div class="flex gap-2 font-mono text-[10px] uppercase tracking-wider opacity-60">
+                    <span>Streamlit</span> • <span>Python</span> • <span>Generative AI</span>
+                </div>
             </div>
-            <div class="glass-card p-6 rounded-2xl">
-                <i data-lucide="mic-2" class="text-amber-500 mb-4"></i>
-                <h4 class="font-bold mb-2">Creative Arts</h4>
-                <p class="text-xs text-gray-500">Bringing harmony through singing—balancing logic with creativity.</p>
+            <div class="glass-card p-8 rounded-3xl">
+                <h3 class="text-xl font-bold mb-2">Accounts Management</h3>
+                <p class="text-sm text-purple-400 font-medium mb-4">Smart Spreadsheets</p>
+                <p class="text-gray-400 text-sm mb-6">Automated spreadsheet systems for efficient account management and financial data organization.</p>
+                <div class="flex gap-2 font-mono text-[10px] uppercase tracking-wider opacity-60">
+                    <span>Excel/Sheets</span> • <span>Automation</span>
+                </div>
             </div>
+        </div>
+    </section>
+
+    <section id="skills" class="py-20 px-6 max-w-6xl mx-auto border-t border-white/5">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+            <div>
+                <h2 class="text-3xl font-bold mb-4">Technical <br> Expertise</h2>
+                <p class="text-gray-500">My toolkit for data-driven innovation.</p>
+            </div>
+            <div class="lg:col-span-2 grid grid-cols-2 md:grid-cols-3 gap-8">
+                <div>
+                    <h4 class="text-purple-400 font-bold text-xs uppercase mb-4 tracking-widest">Core AI/DS</h4>
+                    <ul class="text-gray-300 space-y-2 text-sm">
+                        <li>Machine Learning (ML)</li>
+                        <li>Deep Learning (DL)</li>
+                        <li>SQL / DWDM</li>
+                        <li>Weka / Orange Tools</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-purple-400 font-bold text-xs uppercase mb-4 tracking-widest">Programming</h4>
+                    <ul class="text-gray-300 space-y-2 text-sm">
+                        <li>Python</li>
+                        <li>Java</li>
+                        <li>C Language</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-purple-400 font-bold text-xs uppercase mb-4 tracking-widest">Soft Skills</h4>
+                    <ul class="text-gray-300 space-y-2 text-sm">
+                        <li>Leadership (Activist)</li>
+                        <li>Technical Teaching</li>
+                        <li>Communication</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="languages" class="py-20 px-6 max-w-6xl mx-auto">
+        <h2 class="text-2xl font-bold mb-8">Linguistic Proficiency</h2>
+        <div class="flex flex-wrap gap-4">
+            <span class="glass-card px-6 py-3 rounded-full text-sm">English <span class="text-purple-500 ml-2">Fluent</span></span>
+            <span class="glass-card px-6 py-3 rounded-full text-sm">Kannada <span class="text-purple-500 ml-2">Native</span></span>
+            <span class="glass-card px-6 py-3 rounded-full text-sm">Telugu <span class="text-purple-500 ml-2">Fluent</span></span>
+            <span class="glass-card px-6 py-3 rounded-full text-sm">Hindi <span class="text-purple-500 ml-2">Fluent</span></span>
+            <span class="glass-card px-6 py-3 rounded-full text-sm opacity-60">Tamil <span class="text-gray-500 ml-2">Basic</span></span>
+            <span class="glass-card px-6 py-3 rounded-full text-sm opacity-60">German <span class="text-gray-500 ml-2">Basic</span></span>
         </div>
     </section>
 
     <footer id="contact" class="py-20 px-6 max-w-6xl mx-auto text-center border-t border-white/5">
-        <h2 class="text-4xl font-extrabold mb-4">Ready to Innovate Together?</h2>
-        <p class="text-gray-400 mb-8 max-w-lg mx-auto">Whether it's a data challenge or a social project, I'm always eager to collaborate and learn.</p>
-        <div class="flex flex-col items-center gap-4">
-            <a href="mailto:tejasreeravikumar96@gmail.com" class="text-xl font-bold text-purple-500 hover:text-purple-400 transition underline underline-offset-8">tejasreeravikumar96@gmail.com</a>
-        </div>
-        <div class="mt-16 text-gray-600 text-xs flex flex-col items-center gap-2">
-            <span>© 2026 R. Tejasree • Built with Code and Passion</span>
-            <div class="flex gap-4 opacity-50">
-                <span>Data Science</span> • <span>Activism</span> • <span>Music</span>
-            </div>
+        <p class="text-gray-400 mb-4 font-medium uppercase tracking-widest text-xs italic">Social Activist | AI Innovator | Teacher</p>
+        <a href="mailto:tejasreeravikumar96@gmail.com" class="text-2xl md:text-4xl font-extrabold hover:text-purple-500 transition break-all">tejasreeravikumar96@gmail.com</a>
+        <div class="mt-12 text-gray-600 text-[10px] uppercase tracking-[0.2em]">
+            Designed for 2026 • R. Tejasree
         </div>
     </footer>
 
-    <script>
-        lucide.createIcons();
-    </script>
+    <script>lucide.createIcons();</script>
 </body>
 </html>
