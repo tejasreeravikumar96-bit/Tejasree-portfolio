@@ -16,7 +16,7 @@
             scroll-behavior: smooth;
         }
 
-        /* Subtle Purple Gradient Top */
+        /* Subtle Purple Gradient Top for that "Flashy but Classy" feel */
         .top-glow {
             position: absolute; top: 0; left: 0; width: 100%; height: 600px;
             background: radial-gradient(circle at 50% -10%, rgba(124, 58, 237, 0.08) 0%, transparent 70%);
@@ -32,7 +32,7 @@
         }
         .project-card:hover {
             border-color: var(--accent);
-            box-shadow: 0 20px 40px rgba(124, 58, 237, 0.06);
+            box-shadow: 0 20px 40px rgba(124, 58, 237, 0.08);
             transform: translateY(-8px);
         }
 
@@ -44,18 +44,17 @@
         .reveal { opacity: 0; transform: translateY(30px); transition: all 1s ease-out; }
         .reveal.active { opacity: 1; transform: translateY(0); }
 
-        .btn-hover { transition: all 0.3s ease; }
-        .btn-hover:hover { transform: scale(1.05); background-color: var(--accent); color: white; }
+        .nav-blur { backdrop-filter: blur(12px); background: rgba(255, 255, 255, 0.8); }
     </style>
 </head>
 <body>
     <div class="top-glow"></div>
 
-    <nav class="fixed top-0 w-full z-50 px-8 py-6 flex justify-between items-center backdrop-blur-md bg-white/70 border-b border-gray-100">
+    <nav class="fixed top-0 w-full z-50 px-8 py-6 flex justify-between items-center nav-blur border-b border-gray-100">
         <div class="text-xl font-bold tracking-tighter text-purple-700">R. Tejasree<span class="text-gray-900">.</span></div>
         <div class="flex items-center gap-8 text-[11px] font-black uppercase tracking-widest text-gray-400">
-            <a href="#projects" class="hover:text-purple-600 transition">Portfolio</a>
-            <a href="mailto:tejasreeravikumar96@gmail.com" class="px-6 py-2 border-2 border-purple-600 text-purple-600 rounded-full font-bold hover:bg-purple-600 hover:text-white transition-all">Contact</a>
+            <a href="#projects" class="hover:text-purple-600 transition">Research</a>
+            <a href="mailto:tejasreeravikumar96@gmail.com" class="px-6 py-2 bg-purple-600 text-white rounded-full font-bold hover:bg-purple-700 transition-all shadow-lg shadow-purple-200">Contact</a>
         </div>
     </nav>
 
@@ -64,15 +63,15 @@
             
             <div class="reveal">
                 <div class="inline-flex items-center gap-2 mb-6 px-3 py-1 rounded-full bg-purple-50 text-purple-600 text-[10px] font-bold uppercase tracking-widest border border-purple-100">
-                    <span class="w-1.5 h-1.5 bg-purple-600 rounded-full animate-ping"></span>
+                    <span class="w-1.5 h-1.5 bg-purple-600 rounded-full"></span>
                     Tirupati, India
                 </div>
                 <h1 class="hero-title text-7xl md:text-8xl font-extrabold mb-8 text-gray-900">
-                    Hello, I'm <br><span class="text-purple-600">Tejasree</span>
+                    Hi, I'm <br><span class="text-purple-600">Tejasree</span>
                 </h1>
                 <div class="space-y-6 text-xl text-gray-600 leading-relaxed font-light max-w-xl">
                     <p>I am a dynamic <span class="text-gray-900 font-medium">AI Researcher</span> and social activist driven by a mission to use technical innovation for social good.</p>
-                    <p>Currently pursuing specializations in machine learning, my journey is focused on becoming an <span class="text-gray-900 font-medium italic">Aspiring Professor</span>. I aim to pioneer high-impact social intelligence systems while mentoring the next generation.</p>
+                    <p>Currently pursuing specializations in machine learning, my journey is focused on becoming an <span class="text-gray-900 font-medium italic">Aspiring Professor</span>. I aim to pioneer high-impact social intelligence systems while mentoring the next generation of engineers.</p>
                 </div>
                 
                 <div class="flex gap-4 mt-10">
@@ -85,18 +84,17 @@
                 </div>
             </div>
 
-            <div class="relative reveal">
-                <div class="absolute -top-10 -right-10 w-64 h-64 bg-purple-100 rounded-full blur-3xl opacity-50"></div>
+            <div class="relative reveal flex justify-center lg:justify-end">
                 <div class="profile-frame">
-                    <img src="profile.jpg.png" alt="R. Tejasree" class="w-full max-w-[480px] rounded-[3rem] aspect-[4/5] object-cover border-8 border-white shadow-2xl">
+                    <img src="profile.jpg.png" alt="R. Tejasree" class="w-full max-w-[440px] rounded-[3rem] aspect-[4/5] object-cover border-8 border-white shadow-2xl">
                     
                     <div class="absolute -bottom-8 -left-8 bg-white p-6 rounded-3xl shadow-xl border border-purple-50 flex items-center gap-4">
                         <div class="w-12 h-12 bg-purple-600 rounded-2xl flex items-center justify-center text-white">
-                            <i data-lucide="book-open"></i>
+                            <i data-lucide="award"></i>
                         </div>
                         <div>
-                            <p class="text-[10px] font-black text-gray-400 uppercase tracking-widest leading-none mb-1">Role</p>
-                            <p class="text-lg font-bold text-gray-900 leading-none">Vocalist & Researcher</p>
+                            <p class="text-[10px] font-black text-gray-400 uppercase tracking-widest leading-none mb-1">Status</p>
+                            <p class="text-lg font-bold text-gray-900 leading-none">Researcher & Vocalist</p>
                         </div>
                     </div>
                 </div>
@@ -105,37 +103,41 @@
     </section>
 
     <section id="projects" class="py-32 px-8 max-w-7xl mx-auto">
-        <div class="mb-20 text-center">
+        <div class="mb-20">
             <h2 class="text-xs font-black text-purple-600 uppercase tracking-[0.4em] mb-4">Research & Demos</h2>
-            <p class="text-3xl font-bold text-gray-900 italic">Documented Impact</p>
+            <p class="text-3xl font-bold text-gray-900 italic">Proof of Work</p>
         </div>
 
         <div class="grid md:grid-cols-2 gap-10">
-            <div class="project-card p-12 rounded-[3rem] reveal group">
+            <div class="project-card p-12 rounded-[3.5rem] reveal group">
                 <div class="flex justify-between items-start mb-8">
                     <div class="p-4 bg-purple-50 rounded-2xl text-purple-600 group-hover:bg-purple-600 group-hover:text-white transition-all duration-500">
-                        <i data-lucide="terminal"></i>
+                        <i data-lucide="map-pin"></i>
                     </div>
-                    <span class="text-[10px] font-black text-emerald-500 uppercase tracking-widest bg-emerald-50 px-3 py-1 rounded-full border border-emerald-100">Live Success</span>
+                    <span class="text-[10px] font-black text-emerald-500 uppercase tracking-widest bg-emerald-50 px-3 py-1 rounded-full border border-emerald-100">Live Demo</span>
                 </div>
                 <h4 class="text-2xl font-bold mb-4">Citizen Helper AI</h4>
-                <p class="text-gray-500 font-light mb-8 leading-relaxed">Deployed AI assistant facilitating local community administration tasks. Bridging governance and technology.</p>
-                <a href="#" class="inline-flex items-center gap-2 text-xs font-black uppercase tracking-widest text-purple-600 hover:gap-4 transition-all">
-                    View Demo <i data-lucide="arrow-right" size="14"></i>
+                <p class="text-gray-500 font-light mb-8 leading-relaxed">
+                    A streamlined civic utility tool built on Streamlit. It automates local information retrieval—fetching real-time weather data and geolocating nearby hospitals and universities to aid community navigation.
+                </p>
+                <a href="https://citizen-helper.streamlit.app" target="_blank" class="inline-flex items-center gap-2 text-xs font-black uppercase tracking-widest text-purple-600 hover:gap-4 transition-all">
+                    Launch Application <i data-lucide="arrow-right" size="14"></i>
                 </a>
             </div>
 
-            <div class="project-card p-12 rounded-[3rem] reveal group">
+            <div class="project-card p-12 rounded-[3.5rem] reveal group">
                 <div class="flex justify-between items-start mb-8">
                     <div class="p-4 bg-purple-50 rounded-2xl text-purple-600 group-hover:bg-purple-600 group-hover:text-white transition-all duration-500">
                         <i data-lucide="graduation-cap"></i>
                     </div>
-                    <span class="text-[10px] font-black text-purple-500 uppercase tracking-widest bg-purple-50 px-3 py-1 rounded-full border border-purple-100">Educational</span>
+                    <span class="text-[10px] font-black text-purple-500 uppercase tracking-widest bg-purple-50 px-3 py-1 rounded-full border border-purple-100">Research Tool</span>
                 </div>
                 <h4 class="text-2xl font-bold mb-4">AI Tutor</h4>
-                <p class="text-gray-500 font-light mb-8 leading-relaxed">Streamlit-based platform designed for interactive and personalized technical education for students.</p>
-                <a href="#" class="inline-flex items-center gap-2 text-xs font-black uppercase tracking-widest text-purple-600 hover:gap-4 transition-all">
-                    Launch App <i data-lucide="arrow-right" size="14"></i>
+                <p class="text-gray-500 font-light mb-8 leading-relaxed">
+                    An interactive pedagogical platform designed to democratize technical education. Provides personalized learning pathways for students navigating complex data science and programming concepts.
+                </p>
+                <a href="https://ai-tutor.streamlit.app" target="_blank" class="inline-flex items-center gap-2 text-xs font-black uppercase tracking-widest text-purple-600 hover:gap-4 transition-all">
+                    Launch Application <i data-lucide="arrow-right" size="14"></i>
                 </a>
             </div>
         </div>
@@ -143,7 +145,7 @@
 
     <footer class="py-32 px-8 border-t border-gray-100 text-center">
         <div class="reveal">
-            <h2 class="text-4xl md:text-6xl font-extrabold text-gray-900 mb-12 tracking-tighter">
+            <h2 class="text-3xl md:text-5xl font-extrabold text-gray-900 mb-12 tracking-tighter">
                 tejasreeravikumar96<span class="text-purple-600">@</span>gmail.com
             </h2>
             <div class="flex flex-col md:flex-row justify-center items-center gap-8 text-[10px] font-bold uppercase tracking-[0.3em] text-gray-400">
